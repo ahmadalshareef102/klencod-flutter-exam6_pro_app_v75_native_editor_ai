@@ -1,0 +1,48 @@
+name: exam6_pro_app
+description: Exam6 Pro VIP V7.0 - exact Android shell (Flutter + local WebView + native bridge).
+publish_to: 'none'
+version: 7.5.0+9
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.10.0
+  webview_flutter_android: ^4.3.0
+  file_picker: ^8.1.2
+  share_plus: ^10.1.2
+  path_provider: ^2.1.4
+  printing: ^5.13.2
+  pdf: ^3.11.1
+  url_launcher: ^6.3.1
+  image: ^4.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-Regular.ttf
+        - asset: assets/fonts/Cairo-Bold.ttf
+          weight: 700
+    - family: Mohammad
+      fonts:
+        # الملف نفسه لكل الأوزان حتى لا يُصطنع تثخين فوق الخط
+        - asset: assets/fonts/Mohammad_Bold_normal.ttf
+          weight: 400
+        - asset: assets/fonts/Mohammad_Bold_normal.ttf
+          weight: 500
+        - asset: assets/fonts/Mohammad_Bold_normal.ttf
+          weight: 700
+  assets:
+    - assets/web/index.html
+    - assets/web/native_shim.js
+    - assets/web/native_api.js
+    - assets/web/fonts.css
